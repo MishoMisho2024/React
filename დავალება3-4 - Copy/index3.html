@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example 1</title>
+  </head>
+  <body>
+    <form id="myForm" action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" href="index.html" value="Submit"  />
+
+
+  
+
+
+    </form>
+
+    <script>
+      function validateForms(event) {
+        event.preventDefault();
+
+        const firstName = document.getElementById("fname").value;
+        const lastName = document.getElementById("lname").value;
+
+        if (firstName === "digitalAcademy@gmail.com" && lastName === "iLoveReact123") {
+          console.log("Hello world!");
+          location.replace("./index.html")
+          true
+        } else {
+          console.log("Validation failed.");
+
+        }
+      }
+
+      document.getElementById("myForm").addEventListener("submit", validateForms);
+    </script>
+  </body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+</html>
