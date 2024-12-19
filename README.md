@@ -1,2 +1,0 @@
-# React
-reach mikheil berishvili
